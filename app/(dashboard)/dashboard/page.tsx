@@ -23,7 +23,7 @@ export default function Dashboard() {
   }, []);
   return (
     <div className="min-h-screen  bg-accent-foregroundimage.png">
-      <div className="p-8 bg-accent-foreground">
+      <div className="p-8 min-h-screen bg-accent-foreground">
         <div className="mb-8">
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200 flex justify-between">
           <div className="flex flex-col gap-4">
