@@ -14,7 +14,7 @@ export default function HeroSection() {
               mindmaps, quizzes, notes, and flashcards — all in seconds.
             </p>
             <div className="flex items-center space-x-4">
-              <button onClick={() => router.push('/dashboard')} className="cursor-pointer bg-theme-primary text-theme-light px-6 py-3 rounded-md font-medium hover:bg-theme-secondary transition-colors">
+              <button onClick={() => router.push('/new')} className="cursor-pointer bg-theme-primary text-theme-light px-6 py-3 rounded-md font-medium hover:bg-theme-secondary transition-colors">
                 Get started
               </button>
               <button className="flex items-center text-theme-primary font-medium hover:text-theme-secondary transition-colors">

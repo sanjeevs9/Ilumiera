@@ -7,7 +7,7 @@ export default async function Source({params}: {params: {id: string}}) {
     
 
     return(
-        <div className="flex justify-center items-center h-screen p-8 w-full" >
+        <div className="flex justify-center items-center h-[26rem] p-8 w-full" >
             <WobbleCardDemo id={id} />
         </div>
     )

@@ -3,6 +3,17 @@ import { useState, useRef } from "react";
 import axios from "axios";
 import { network } from "../../../network";
 import { useRouter } from "next/navigation";
+import { WobbleCardDemo } from "@/app/components/WobbleCard";
+import MindmapLoading from "../source/[id]/mindmap/[mindid]/loading";
+
+interface Source {
+    _id: string;
+    metadata: {
+      topic: string;
+    };
+    sourceType: string;
+  }
+  
 
 export default function New() {
     const router = useRouter();
@@ -12,7 +23,42 @@ export default function New() {
     const [isLoading, setIsLoading] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const handleSubmit = async () => {
+    const [mindmapLoading, setMindmapLoading] = useState(false);
+
+
+  async function handleMindmapClick() {
+    setMindmapLoading(true);
+    const id= await handleSubmit();
+    console.log({id});
+    const sources=JSON.parse(localStorage.getItem("sources") || "[]");
+    const source=sources.find((source: Source) => source._id === id);
+    if(source.mindmapId){
+      router.push(`/source/${id}/mindmap/${source.mindmapId}`);
+      return;
+    }
+   const response= await axios.post(`${network}/source/generatemindmap/${id}`,{
+      "userId": "user-123"    
+   },{
+    headers: {
+      "Content-Type": "application/json",
+      "api-key": "e4f47f73-b838-4944-82a7-93a5f9077aa2"
+    }
+   });
+   console.log({response});
+   source.mindmapId=response.data.mindmap.mindmap_id;
+   localStorage.setItem("sources", JSON.stringify(sources));
+   router.push(`/source/${id}/mindmap/${response.data.mindmap.mindmap_id}`);
+  }
+
+  if(mindmapLoading){
+    return (
+      <div className="flex justify-center items-center min-h-screen min-w-screen pl-64 bg-gray-50">
+        <MindmapLoading />
+    </div>
+    )
+  }
+
+    const handleSubmit = async (): Promise<string> => {
         setIsLoading(true);
         try {
             // Handle YouTube URLs
@@ -37,9 +83,9 @@ export default function New() {
                             }
                         });
                         console.log({response});
-                        setDetectedUrls([]);
-                        setInputText("");
-                        setUploadedFiles([]);
+
+
+
                         const sources=localStorage.getItem("sources");
                         if(sources){
                             const sourceArray=JSON.parse(sources);
@@ -48,22 +94,19 @@ export default function New() {
                         }else{
                             localStorage.setItem("sources", JSON.stringify([response.data]));
                         }
-                        router.push(`/source/${response.data._id}`);
+
+                        return response.data._id;
                     }
                     else{
-                        console.log("Not a YouTube URL");
+                        throw new Error("Not a YouTube URL");
                     }
                 
             }
-
-            // Clear inputs after successful submission
-            setInputText("");
-            setDetectedUrls([]);
-            setUploadedFiles([]);
+            throw new Error("No content to submit");
             
         } catch (error) {
             console.error('Error submitting source:', error);
-            // Handle error appropriately
+            throw error;
         } finally {
             setIsLoading(false);
         }
@@ -106,7 +149,7 @@ export default function New() {
     };
 
     return (
-        <div className=" min-h-screen flex items-center justify-center px-4">
+        <div className=" min-h-screen flex flex-col items-center justify-center px-4 gap-4">
             <div className="max-w-3xl w-full">
                 {/* Main Question */}
                 <div className="text-center mb-8">
@@ -154,44 +197,6 @@ export default function New() {
                                 </svg>
                                 <span>Upload File</span>
                             </button>
-
-                            <button
-                            onClick={handleSubmit}
-                            disabled={isLoading || (inputText.length === 0 && detectedUrls.length === 0 && uploadedFiles.length === 0)}
-                            className="cursor-pointer w-10 h-10 bg-theme-primary hover:bg-theme-secondary disabled:bg-theme-muted rounded-full flex items-center justify-center transition-colors"
-                        >
-                            {isLoading ? (
-                                <svg
-                                    className="animate-spin"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="white"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M21 12a9 9 0 11-6.219-8.56" />
-                                </svg>
-                            ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="white"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M5 12h14" />
-                                    <path d="m12 5 7 7-7 7" />
-                                </svg>
-                            )}
-                        </button>
                                 </div>                            
                             {/* Hidden File Input */}
                             <input
@@ -272,6 +277,10 @@ export default function New() {
                        
                     </div>
                 </div>
+               
+            </div>
+            <div className="w-full">
+            <WobbleCardDemo handleMindmapClick={handleMindmapClick} />
             </div>
         </div>
     );
