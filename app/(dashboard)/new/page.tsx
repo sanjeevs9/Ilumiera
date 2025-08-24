@@ -24,7 +24,7 @@ export default function New() {
                             userId: "user-123", // This should come from your auth system
                             url: detectedUrls[0],
                             metadata: {
-                                topic: String(detectedUrls[0].split("_channel")[1].slice(1))
+                                topic: "YouTube"
                             }
                         };
 
