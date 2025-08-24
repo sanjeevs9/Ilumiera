@@ -58,10 +58,10 @@ export function WobbleCardDemo({id}: {id: string}) {
         onClick={handleMindmapClick}
       >
         <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="text-left text-balance text-xl md:text-2xl lg:text-4xl font-bold tracking-tight drop-shadow-lg bg-gradient-to-r from-white to-pink-100 bg-clip-text text-transparent">
           Transform your content into mindmaps 
           </h2>
-          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+          <p className="mt-4 text-left text-base md:text-lg text-pink-50 font-medium leading-relaxed drop-shadow-sm">
           Turn YouTube videos, PDFs, and images into clear visual maps.
           </p>
         </div>
@@ -74,20 +74,20 @@ export function WobbleCardDemo({id}: {id: string}) {
         />
       </WobbleCard>
       <WobbleCard containerClassName="cursor-pointer col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+        <h2 className="max-w-80 text-left text-balance text-xl md:text-2xl lg:text-4xl font-bold tracking-tight drop-shadow-lg bg-gradient-to-r from-white to-gray-100 bg-clip-text text-transparent">
           Turn your content into a Quiz
         </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+        <p className="mt-4 max-w-[26rem] text-left text-base md:text-lg text-gray-50 font-medium leading-relaxed drop-shadow-sm">
         Create interactive quizzes to test your knowledge and reinforce learning.
         </p>
       </WobbleCard>
       <WobbleCard containerClassName="cursor-pointer col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="flex  justify-between h-[200px]"> 
         <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          Create a deck of study cards with flip and review tools for effective learning.
+          <h2 className="max-w-sm md:max-w-lg text-left text-balance text-xl md:text-2xl lg:text-4xl font-bold tracking-tight drop-shadow-lg bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+          Create your own flashcards
           </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+          <p className="mt-4 max-w-[26rem] text-left text-base md:text-lg text-blue-50 font-medium leading-relaxed drop-shadow-sm">
           Turn your content into a deck of study cards with flip and review tools for effective learning.
          
           </p>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "ilumiera",
   description: "Generate mindmaps, quizzes, notes, and flashcards from your content",
   icons: {
-    icon: "/logo.webp",
+    icon: "/logo.png",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.webp" />
+        <link rel="icon" href="/logo.png" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

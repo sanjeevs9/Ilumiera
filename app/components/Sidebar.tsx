@@ -10,7 +10,7 @@ export default function Sidebar() {
         {/* Logo */}
         <div className=" flex items-center mb-8">
           <div className="cursor-pointer flex" onClick={() => router.push('/')}>
-          <Image src="/logo.webp" alt="Ilumiera" width={30} height={30} />
+          <Image src="/logo.png" alt="Ilumiera" width={30} height={30} />
           <span className="font-bold text-xl ml-2 text-theme-primary">Ilumiera</span>
           </div>
         </div>

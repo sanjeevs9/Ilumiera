@@ -10,8 +10,8 @@ export default function Navbar() {
         <div className="bg-white rounded-full shadow-sm py-3 px-4 flex items-center justify-between border border-theme-muted/20">
           <div className="flex items-center space-x-8">
             <div onClick={() => router.push('/')} className="cursor-pointer flex items-center">
-              <Image src="/logo.webp" alt="Ilumiera" width={30} height={30} />
-              <span className="font-bold text-theme-primary">Ilumiera</span>
+              <Image src="/logo.png" alt="Ilumiera" width={30} height={30} />
+              <span className="pl-2 font-bold text-theme-primary">Ilumiera</span>
             </div>
             <nav className="flex items-center space-x-6">
               <div className="flex items-center">
