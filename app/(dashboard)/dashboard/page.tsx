@@ -22,8 +22,8 @@ export default function Dashboard() {
     setSource(sources);
   }, []);
   return (
-    <div className="min-h-screen  bg-accent-foregroundimage.png">
-      <div className="p-8 min-h-screen bg-accent-foreground">
+    <div className="min-h-screen  bg-accent-foreground ">
+    <div className="p-8 min-h-screen bg-accent-foreground xl:pl-14 xl:pr-14">
         <div className="mb-8">
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200 flex justify-between">
           <div className="flex flex-col gap-4">
@@ -33,19 +33,19 @@ export default function Dashboard() {
             <p className="mb-8 text-lg" style={{color: '#9798A5'}}>Let&apos;s get studying! Choose your path to learning and growth.</p>
             
             <div onClick={() => router.push('/new')} className="cursor-pointer ">
-              <div className="p-6 rounded-2xl hover:shadow-xl cursor-pointer transition-all duration-300 transform hover:scale-[1.02] text-white" style={{background: 'linear-gradient(to right, #302758, #876283)'}}>
+              <div className="p-4 rounded-xl hover:shadow-xl cursor-pointer transition-all duration-300 transform hover:scale-[1.02] text-white" style={{background: 'linear-gradient(to right, #302758, #876283)'}}>
                 <div className="flex items-center">
-                  <div className="w-14 h-14 bg-white/20 rounded-xl mr-6 flex items-center justify-center backdrop-blur-sm">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 bg-white/20 rounded-lg mr-4 flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-bold text-xl mb-2">Start a Lesson</h3>
-                    <p className="text-white/90 text-base">Learn something new today!</p>
+                    <h3 className="font-bold text-lg mb-1">Start a Lesson</h3>
+                    <p className="text-white/90 text-sm">Learn something new today!</p>
                   </div>
                   <div className="ml-auto">
-                    <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
