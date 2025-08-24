@@ -1,6 +1,6 @@
 
 
-export default function Loading() {
+export default function MindmapLoading() {
     return (
         <div className="relative h-screen w-full bg-gray-50 overflow-hidden">
 

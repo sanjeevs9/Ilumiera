@@ -110,21 +110,21 @@ export default function New() {
             <div className="max-w-3xl w-full">
                 {/* Main Question */}
                 <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-black mb-3">
+                    <h1 className="text-3xl font-bold text-theme-primary mb-3">
                         What do you want to learn?
                     </h1>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-theme-muted text-base">
                         Support: PDF, Images (PNG/JPG), YouTube links, and text.
                     </p>
                 </div>
 
                 {/* Input Area */}
-                <div className="relative border border-gray-200 rounded-lg bg-white">
+                <div className="relative border border-theme-muted/30 rounded-lg bg-white shadow-sm">
                     <textarea
                         value={inputText}
                         onChange={handleTextChange}
                         placeholder="Paste text, Youtube links or websites here..."
-                        className="w-full h-32 p-6 text-gray-700 placeholder-gray-400 resize-none border-0 focus:outline-none bg-transparent rounded-t-lg"
+                        className="w-full h-32 p-6 text-theme-primary placeholder-theme-muted resize-none border-0 focus:outline-none bg-transparent rounded-t-lg"
                     />
                    
                     
@@ -135,7 +135,7 @@ export default function New() {
                             <div className="flex items-center justify-between w-full">
                             <button 
                                 onClick={handleFileButtonClick}
-                                className="flex items-center space-x-2 bg-gray-100 border border-gray-200 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors"
+                                className="flex items-center space-x-2 bg-theme-light border border-theme-muted/30 rounded-lg px-3 py-2 text-sm font-medium text-theme-primary hover:bg-theme-secondary hover:text-theme-light transition-colors"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ export default function New() {
                             <button
                             onClick={handleSubmit}
                             disabled={isLoading || (inputText.length === 0 && detectedUrls.length === 0 && uploadedFiles.length === 0)}
-                            className="cursor-pointer w-10 h-10 bg-purple-400 hover:bg-purple-500 disabled:bg-purple-300 rounded-full flex items-center justify-center transition-colors"
+                            className="cursor-pointer w-10 h-10 bg-theme-primary hover:bg-theme-secondary disabled:bg-theme-muted rounded-full flex items-center justify-center transition-colors"
                         >
                             {isLoading ? (
                                 <svg
@@ -205,18 +205,18 @@ export default function New() {
                            
                             {/* Separator Line - Only show when there are URLs */}
                             {(detectedUrls.length || uploadedFiles.length) > 0 && (
-                                <div className="border-t border-gray-200 w-full"></div>
+                                <div className="border-t border-theme-muted/30 w-full"></div>
                             )}
                             <div className="flex flex-row space-x-2 w-full">
                             {/* Display Detected URLs */}
                             {detectedUrls.length > 0 && (
                                 <div className="space-y-2">
                                     {detectedUrls.map((url, index) => (
-                                        <div key={index} className="flex items-center justify-between bg-gray-100 rounded-full px-3 py-1.5 max-w-[10rem]">
-                                            <span className="text-sm text-gray-700 truncate">{url}</span>
+                                        <div key={index} className="flex items-center justify-between bg-theme-light rounded-full px-3 py-1.5 max-w-[10rem]">
+                                            <span className="text-sm text-theme-primary truncate">{url}</span>
                                             <button
                                                 onClick={() => removeUrl(url)}
-                                                className="text-gray-400 hover:text-gray-600 ml-2"
+                                                className="text-theme-muted hover:text-theme-secondary ml-2"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
@@ -240,11 +240,11 @@ export default function New() {
                             {uploadedFiles.length > 0 && (
                                 <div className="space-y-2">
                                     {uploadedFiles.map((file, index) => (
-                                        <div key={index} className="flex items-center justify-between bg-gray-100 rounded-full px-3 py-1.5 max-w-[10rem]">
-                                            <span className="text-sm text-gray-700 truncate">{file.name}</span>
+                                        <div key={index} className="flex items-center justify-between bg-theme-light rounded-full px-3 py-1.5 max-w-[10rem]">
+                                            <span className="text-sm text-theme-primary truncate">{file.name}</span>
                                             <button
                                                 onClick={() => removeFile(index)}
-                                                className="text-gray-400 hover:text-gray-600 ml-2"
+                                                className="text-theme-muted hover:text-theme-secondary ml-2"
                                             >
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"

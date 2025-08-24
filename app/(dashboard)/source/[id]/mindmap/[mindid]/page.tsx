@@ -8,7 +8,7 @@ import { useState, useCallback, useEffect } from "react";
 import React from "react";
 import { useRouter } from "next/navigation";
 import dagre from "dagre";
-import Loading from "./loading";
+import MindmapLoading from "./loading";
 
 const nodeWidth = 220;
 const nodeHeight = 80;
@@ -210,7 +210,7 @@ export default function MindmapPage({ params }: { params: Promise<{ mindid: stri
         return (
             <>
             <div className="flex justify-center items-center min-h-screen min-w-screen pl-64 bg-gray-50">
-                <Loading />
+                <MindmapLoading />
             </div>
             </>
         );

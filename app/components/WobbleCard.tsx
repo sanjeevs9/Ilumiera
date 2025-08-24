@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { WobbleCard } from "./ui/wobble-card";
 import { CardStackDemo } from "./CardStack";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { network } from "../../network";
+import MindmapLoading from "../(dashboard)/source/[id]/mindmap/[mindid]/loading";
 
 interface Source {
   _id: string;
@@ -15,6 +16,7 @@ interface Source {
 
 export function WobbleCardDemo({id}: {id: string}) {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
 
   async function handleMindmapClick() {
@@ -24,7 +26,7 @@ export function WobbleCardDemo({id}: {id: string}) {
       router.push(`/source/${id}/mindmap/${source.mindmapId}`);
       return;
     }
-
+    setIsLoading(true);
    const response= await axios.post(`${network}/source/generatemindmap/${id}`,{
       "userId": "user-123"    
    },{
@@ -38,6 +40,13 @@ export function WobbleCardDemo({id}: {id: string}) {
    localStorage.setItem("sources", JSON.stringify(sources));
    router.push(`/source/${id}/mindmap/${response.data.mindmap.mindmap_id}`);
   }
+  if(isLoading){
+    return (
+      <div className="flex justify-center items-center min-h-screen min-w-screen pl-64 bg-gray-50">
+        <MindmapLoading />
+    </div>
+    )
+  }
 
 
 
@@ -50,11 +59,10 @@ export function WobbleCardDemo({id}: {id: string}) {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Turn your source into a Mindmap
+          Transform your content into mindmaps 
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+          Turn YouTube videos, PDFs, and images into clear visual maps.
           </p>
         </div>
         <Image
@@ -67,21 +75,21 @@ export function WobbleCardDemo({id}: {id: string}) {
       </WobbleCard>
       <WobbleCard containerClassName="cursor-pointer col-span-1 min-h-[300px]">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          Turn your source into a Quiz
+          Turn your content into a Quiz
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          Test comprehension with MCQs. Configure difficulty and size of the quiz.
+        Create interactive quizzes to test your knowledge and reinforce learning.
         </p>
       </WobbleCard>
       <WobbleCard containerClassName="cursor-pointer col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="flex  justify-between h-[200px]"> 
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Turn your source into a deck of study cards with flip and review tools for effective learning.
+          Create a deck of study cards with flip and review tools for effective learning.
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            Turn your source into a deck of study cards with flip and review tools for effective learning.
-            popular AI platform for developers.
+          Turn your content into a deck of study cards with flip and review tools for effective learning.
+         
           </p>
         </div>
           <div className="flex justify-center items-center  p-8" >

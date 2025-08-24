@@ -3,93 +3,93 @@ import Image from "next/image";
 export default function Mainline() {
     return(
         <>
-         <div className="bg-gray-50 w-full p-8">
+         <div className=" w-full p-8">
         {/* Header */}
         <div className="max-w-5xl mx-auto mb-12 text-center">
-          <h1 className="text-5xl font-bold text-black">
-            Mainline your resource
+          <h1 className="text-5xl font-bold text-theme-primary">
+            Transform your content into
             <br />
-            allocation and execution
+            powerful learning tools
           </h1>
         </div>
         {/* Upper Sections */}
-        <div className="max-w-5xl mx-auto border-b border-dashed border-gray-300 pb-12 mb-12">
+        <div className="max-w-5xl mx-auto border-b border-dashed border-theme-muted/30 pb-12 mb-12">
           <div className="flex">
             {/* Left Section - Reusable issue templates */}
-            <div className="w-1/2 pr-8 border-r border-dashed border-gray-300">
-              <h2 className="font-bold text-lg mb-2">
-                Reusable issue templates.
+            <div className="w-1/2 pr-8 border-r border-dashed border-theme-muted/30">
+              <h2 className="font-bold text-lg mb-2 text-theme-primary">
+                Smart content processing.
               </h2>
-              <p className="text-gray-600 mb-6">
-                Draft lightning-fast documents with our Smart Instructions and
-                Templates.
+              <p className="text-theme-muted mb-6">
+                Upload PDFs, images, or YouTube links and instantly generate
+                mindmaps, quizzes, notes, and flashcards.
               </p>
               {/* Template Card */}
-              <div className="bg-white rounded-lg shadow-sm p-5 border border-gray-200">
+              <div className="bg-white rounded-lg shadow-sm p-5 border border-theme-muted/20">
                 <div className="flex justify-between mb-6">
                   <div>
-                    <p className="text-sm font-medium">
-                      Write a brief overview of the project, its purpose, and
-                      its key features
+                    <p className="text-sm font-medium text-theme-primary">
+                      Transform your YouTube video into comprehensive study materials
+                      with AI-powered content analysis
                     </p>
                   </div>
-                  <button className="text-gray-400">
+                  <button className="text-theme-muted hover:text-theme-secondary transition-colors">
                     <span className="text-lg">×</span>
                   </button>
                 </div>
                 <div className="flex gap-2 mb-5">
-                  <button className="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full flex items-center gap-1">
-                    <span className="w-4 h-4 bg-gray-300 rounded-full inline-block"></span>{' '}
-                    Add source
+                  <button className="bg-theme-light text-theme-muted text-xs px-3 py-1.5 rounded-full flex items-center gap-1 hover:bg-theme-secondary hover:text-theme-light transition-colors">
+                    <span className="w-4 h-4 bg-theme-muted rounded-full inline-block"></span>{' '}
+                    Add content
                   </button>
-                  <button className="bg-gray-100 text-gray-600 text-xs px-3 py-1.5 rounded-full flex items-center gap-1">
-                    <span className="w-4 h-4 bg-gray-300 rounded-full inline-block"></span>{' '}
-                    AI Writer
+                  <button className="bg-theme-light text-theme-muted text-xs px-3 py-1.5 rounded-full flex items-center gap-1 hover:bg-theme-secondary hover:text-theme-light transition-colors">
+                    <span className="w-4 h-4 bg-theme-muted rounded-full inline-block"></span>{' '}
+                    AI Generator
                   </button>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-4 bg-blue-200 rounded-full relative">
-                      <div className="absolute w-4 h-4 bg-white rounded-full border border-blue-300 left-0"></div>
+                    <div className="w-8 h-4 bg-theme-secondary/30 rounded-full relative">
+                      <div className="absolute w-4 h-4 bg-white rounded-full border border-theme-secondary left-0"></div>
                     </div>
-                    <span className="text-gray-500 text-sm">Create more</span>
+                    <span className="text-theme-muted text-sm">Generate more</span>
                   </div>
-                  <button className="bg-black text-white text-sm px-4 py-2 rounded-full flex items-center gap-1">
-                    Add template <span className="ml-1">⌘</span>
+                  <button className="bg-theme-primary text-theme-light text-sm px-4 py-2 rounded-full flex items-center gap-1 hover:bg-theme-secondary transition-colors">
+                    Create study set <span className="ml-1">⌘</span>
                   </button>
                 </div>
               </div>
             </div>
             {/* Right Section - Simplify your stack */}
             <div className="w-1/2 pl-8">
-              <h2 className="font-bold text-lg mb-2">Simplify your stack.</h2>
-              <p className="text-gray-600 mb-6">
-                No more Confluence, SharePoint, or Microsoft Word.
+              <h2 className="font-bold text-lg mb-2 text-theme-primary">Simplify your learning.</h2>
+              <p className="text-theme-muted mb-6">
+                No more scattered notes, complex study tools, or manual flashcard creation.
               </p>
               {/* App Icons Grid */}
               <div className="grid grid-cols-4 gap-6">
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-blue-500 flex items-center justify-center rounded">
+                  <div className="w-12 h-12 bg-theme-secondary flex items-center justify-center rounded">
                     <div className="w-6 h-6 bg-white"></div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-green-600 flex items-center justify-center rounded">
+                  <div className="w-12 h-12 bg-theme-primary flex items-center justify-center rounded">
                     <div className="w-6 h-6 text-white">X</div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-black flex items-center justify-center rounded">
+                  <div className="w-12 h-12 bg-theme-primary flex items-center justify-center rounded">
                     <div className="w-6 h-6 text-white">N</div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-blue-100 flex items-center justify-center rounded">
-                    <div className="w-6 h-6 text-blue-500">W</div>
+                  <div className="w-12 h-12 bg-theme-light flex items-center justify-center rounded border border-theme-muted/20">
+                    <div className="w-6 h-6 text-theme-secondary">W</div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm border border-theme-muted/20">
                     <div className="w-6 h-6 flex">
                       <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                       <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
@@ -98,23 +98,23 @@ export default function Mainline() {
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm border border-theme-muted/20">
                     <div className="w-6 h-6">
-                      <div className="w-6 h-6 bg-gradient-to-r from-yellow-400 via-green-500 to-blue-500 rounded"></div>
+                      <div className="w-6 h-6 bg-gradient-to-r from-theme-secondary via-theme-primary to-theme-muted rounded"></div>
                     </div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm">
-                    <div className="w-6 h-6 bg-blue-500 rounded"></div>
+                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm border border-theme-muted/20">
+                    <div className="w-6 h-6 bg-theme-secondary rounded"></div>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm">
+                  <div className="w-12 h-12 bg-white flex items-center justify-center rounded shadow-sm border border-theme-muted/20">
                     <div className="w-6 h-6 flex flex-wrap">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-theme-secondary rounded-full"></div>
+                      <div className="w-3 h-3 bg-theme-secondary rounded-full"></div>
+                      <div className="w-3 h-3 bg-theme-secondary rounded-full"></div>
                     </div>
                   </div>
                 </div>
@@ -126,27 +126,27 @@ export default function Mainline() {
         <div className="max-w-5xl mx-auto">
           <div className="flex">
             {/* Graveyard Section */}
-            <div className="w-1/3 pr-6 border-r border-dashed border-gray-300">
-              <h2 className="font-bold text-lg mb-2">Graveyard it.</h2>
-              <p className="text-gray-600 mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.
+            <div className="w-1/3 pr-6 border-r border-dashed border-theme-muted/30">
+              <h2 className="font-bold text-lg mb-2 text-theme-primary">Archive it.</h2>
+              <p className="text-theme-muted mb-6">
+                Keep your completed study materials organized and easily accessible for future reference.
               </p>
-              <div className="bg-gray-100 rounded-lg p-4 mb-4">
+              <div className="bg-theme-light rounded-lg p-4 mb-4">
                 <div className="flex justify-between items-center mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-gray-300 rounded"></div>
-                    <span className="text-gray-600 text-sm">Graveyard</span>
-                    <span className="text-gray-400 text-xs">1,032</span>
+                    <div className="w-5 h-5 bg-theme-muted rounded"></div>
+                    <span className="text-theme-primary text-sm">Study Archive</span>
+                    <span className="text-theme-muted text-xs">1,032</span>
                   </div>
                   <div className="flex gap-2">
-                    <button className="text-gray-500">•••</button>
-                    <button className="text-gray-500">+</button>
+                    <button className="text-theme-muted hover:text-theme-secondary transition-colors">•••</button>
+                    <button className="text-theme-muted hover:text-theme-secondary transition-colors">+</button>
                   </div>
                 </div>
-                                  <div className="bg-white rounded-md p-3 mb-3">
+                                  <div className="bg-white rounded-md p-3 mb-3 border border-theme-muted/10">
                     <div className="flex justify-between mb-1">
-                      <div className="text-xs text-gray-400">PW-100</div>
-                      <div className="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                      <div className="text-xs text-theme-muted">ST-100</div>
+                      <div className="w-6 h-6 bg-theme-muted rounded-full overflow-hidden">
                         <Image
                           src="https://uploadthingy.s3.us-west-1.amazonaws.com/j1UJFaoLpDqXtB4EyhS8dr/image.png"
                           alt=""
@@ -158,25 +158,25 @@ export default function Mainline() {
                     </div>
                   <div className="mb-2">
                     <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
-                      <span className="text-sm">Image optimisation</span>
+                      <div className="w-4 h-4 bg-theme-secondary rounded-full"></div>
+                      <span className="text-sm text-theme-primary">Machine Learning Basics</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className="text-gray-400 text-xs">•••</div>
-                    <div className="flex items-center gap-1 text-xs text-gray-400">
+                    <div className="text-theme-muted text-xs">•••</div>
+                    <div className="flex items-center gap-1 text-xs text-theme-muted">
                       <span>▷</span> 3
                     </div>
                   </div>
-                  <div className="mt-2 text-xs text-gray-400 flex items-center gap-1">
-                    <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
-                    [MMI AR Platform]
+                  <div className="mt-2 text-xs text-theme-muted flex items-center gap-1">
+                    <div className="w-4 h-4 bg-theme-secondary rounded-full"></div>
+                    [CS Course Materials]
                   </div>
                 </div>
-                <div className="bg-white rounded-md p-3">
+                <div className="bg-white rounded-md p-3 border border-theme-muted/10">
                   <div className="flex justify-between mb-1">
-                    <div className="text-xs text-gray-400">PW-100</div>
-                    <div className="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                    <div className="text-xs text-theme-muted">ST-101</div>
+                    <div className="w-6 h-6 bg-theme-muted rounded-full overflow-hidden">
                       <Image
                         src="https://uploadthingy.s3.us-west-1.amazonaws.com/j1UJFaoLpDqXtB4EyhS8dr/image.png"
                         alt=""
@@ -188,33 +188,33 @@ export default function Mainline() {
                   </div>
                   <div className="mb-2">
                     <div className="flex items-center gap-1">
-                      <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
-                      <span className="text-sm">Image optimisation</span>
+                      <div className="w-4 h-4 bg-theme-secondary rounded-full"></div>
+                      <span className="text-sm text-theme-primary">Physics Formulas</span>
                     </div>
                   </div>
                   <div className="flex justify-between items-center">
-                    <div className="text-gray-400 text-xs">•••</div>
-                    <div className="flex items-center gap-1 text-xs text-gray-400">
-                      <span>▷</span> 3
+                    <div className="text-theme-muted text-xs">•••</div>
+                    <div className="flex items-center gap-1 text-xs text-theme-muted">
+                      <span>▷</span> 5
                     </div>
                   </div>
-                  <div className="mt-2 text-xs text-gray-400 flex items-center gap-1">
-                    <div className="w-4 h-4 bg-gray-200 rounded-full"></div>
-                    [MMI AR Platform]
+                  <div className="mt-2 text-xs text-theme-muted flex items-center gap-1">
+                    <div className="w-4 h-4 bg-theme-secondary rounded-full"></div>
+                    [Science Study Set]
                   </div>
                 </div>
               </div>
             </div>
             {/* Task Discussions Section */}
-            <div className="w-1/3 px-6 border-r border-dashed border-gray-300">
-              <h2 className="font-bold text-lg mb-2">Task discussions.</h2>
-              <p className="text-gray-600 mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                eiusmod.
+            <div className="w-1/3 px-6 border-r border-dashed border-theme-muted/30">
+              <h2 className="font-bold text-lg mb-2 text-theme-primary">Study collaboration.</h2>
+              <p className="text-theme-muted mb-6">
+                Share study materials and collaborate with classmates on
+                generated content and learning progress.
               </p>
-                              <div className="bg-white rounded-lg p-5 shadow-sm">
+                              <div className="bg-white rounded-lg p-5 shadow-sm border border-theme-muted/20">
                   <div className="flex gap-3">
-                    <div className="w-8 h-8 bg-gray-300 rounded-full overflow-hidden">
+                    <div className="w-8 h-8 bg-theme-muted rounded-full overflow-hidden">
                       <Image
                         src="https://uploadthingy.s3.us-west-1.amazonaws.com/j1UJFaoLpDqXtB4EyhS8dr/image.png"
                         alt=""
@@ -225,11 +225,11 @@ export default function Mainline() {
                     </div>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-medium text-sm">Meriza Kwan</span>
-                      <span className="text-gray-400 text-xs">10:26AM</span>
+                      <span className="font-medium text-sm text-theme-primary">Sarah Chen</span>
+                      <span className="text-theme-muted text-xs">10:26AM</span>
                     </div>
-                    <p className="text-sm text-gray-600">
-                      Sed do eiusmod tempor incididunt ut labore et dolore!
+                    <p className="text-sm text-theme-muted">
+                      Great mindmap! Can you share the flashcards too?
                     </p>
                   </div>
                 </div>
@@ -237,20 +237,20 @@ export default function Mainline() {
             </div>
             {/* Notifications Section */}
             <div className="w-1/3 pl-6">
-              <h2 className="font-bold text-lg mb-2">Notifications.</h2>
-              <p className="text-gray-600 mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-                eiusmod.
+              <h2 className="font-bold text-lg mb-2 text-theme-primary">Study updates.</h2>
+              <p className="text-theme-muted mb-6">
+                Stay updated on your learning progress and new content
+                generated from your materials.
               </p>
-              <div className="bg-white rounded-lg p-3 shadow-sm">
+              <div className="bg-white rounded-lg p-3 shadow-sm border border-theme-muted/20">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="font-medium">Inbox</span>
+                  <span className="font-medium text-theme-primary">Learning Hub</span>
                   <div className="flex gap-2">
-                    <button className="text-gray-500">•••</button>
-                    <button className="text-gray-500">
+                    <button className="text-theme-muted hover:text-theme-secondary transition-colors">•••</button>
+                    <button className="text-theme-muted hover:text-theme-secondary transition-colors">
                       <span className="w-4 h-4 inline-block">≡</span>
                     </button>
-                    <button className="text-gray-500">
+                    <button className="text-theme-muted hover:text-theme-secondary transition-colors">
                       <span className="w-4 h-4 inline-block">🗑</span>
                     </button>
                   </div>
@@ -258,9 +258,9 @@ export default function Mainline() {
                 {[1, 2, 3, 4, 5].map((item, index) => (
                   <div
                     key={index}
-                    className="flex gap-3 mb-3 pb-3 border-b border-gray-100 last:border-0"
+                    className="flex gap-3 mb-3 pb-3 border-b border-theme-muted/20 last:border-0"
                   >
-                    <div className="w-6 h-6 bg-gray-300 rounded-full overflow-hidden">
+                    <div className="w-6 h-6 bg-theme-muted rounded-full overflow-hidden">
                       <Image
                         src="https://uploadthingy.s3.us-west-1.amazonaws.com/j1UJFaoLpDqXtB4EyhS8dr/image.png"
                         alt=""
@@ -271,21 +271,21 @@ export default function Mainline() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-1 mb-1">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                        <span className="text-xs font-medium">
-                          PW-100 image optimisation
+                        <span className="w-2 h-2 bg-theme-secondary rounded-full"></span>
+                        <span className="text-xs font-medium text-theme-primary">
+                          {index % 3 === 0 ? 'New mindmap generated' : index % 3 === 1 ? 'Quiz completed' : 'Flashcards ready'}
                         </span>
                       </div>
-                      <div className="text-xs text-gray-400">
-                        Neil replied: Is it done yet?
+                      <div className="text-xs text-theme-muted">
+                        {index % 3 === 0 ? 'Your YouTube video has been processed' : index % 3 === 1 ? 'You scored 85% on Biology quiz' : 'Study set from PDF is ready for review'}
                       </div>
                     </div>
                     <div className="flex flex-col items-end">
-                      <div className="text-xs text-yellow-500 font-medium">
+                      <div className="text-xs text-theme-secondary font-medium">
                         12 Mar
                       </div>
                       {index % 2 === 0 && (
-                        <div className="w-5 h-5 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-xs font-bold mt-1">
+                        <div className="w-5 h-5 bg-theme-light rounded-full flex items-center justify-center text-theme-secondary text-xs font-bold mt-1 border border-theme-secondary">
                           !
                         </div>
                       )}

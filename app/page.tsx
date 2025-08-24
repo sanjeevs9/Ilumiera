@@ -7,7 +7,7 @@ export default function Home() {
 
   return(
 <>
-    <div className="bg-[#f9f5eb] w-full min-h-screen">
+    <div className="bg-gradient-to-br from-theme-light to-white w-full min-h-screen">
       {/* Navigation */}
       <Navbar />
       {/* Hero Section */}

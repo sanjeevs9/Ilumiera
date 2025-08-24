@@ -33,8 +33,6 @@ export const Highlight = ({
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
     content: (
       <p>
         These cards are amazing, <Highlight>I want to use them</Highlight> in my
@@ -44,8 +42,6 @@ const CARDS = [
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
     content: (
       <p>
         I dont like this Twitter thing,{" "}
@@ -57,8 +53,6 @@ const CARDS = [
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
     content: (
       <p>
         The first rule of
