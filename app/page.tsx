@@ -2,6 +2,7 @@
 import Navbar from "./components/Navbar"
 import HeroSection from "./components/HeroSection"
 import Mainline from "./components/Mainline"
+import Video from "./components/Video"
 
 export default function Home() {
 
@@ -12,6 +13,8 @@ export default function Home() {
       <Navbar />
       {/* Hero Section */}
       <HeroSection />
+      {/* Video Section */}
+      <Video />
       {/* Company Showcase Section */}
       {/* <CompanySection /> */}
       {/* Original Content */}

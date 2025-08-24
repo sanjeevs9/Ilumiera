@@ -22,16 +22,17 @@ export default function Dashboard() {
     setSource(sources);
   }, []);
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen  bg-accent-foregroundimage.png">
       <div className="p-8 bg-accent-foreground">
         <div className="mb-8">
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-200 flex justify-between">
+          <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-bold mb-3" style={{color: '#302758'}}>
               Hey Sanjeev Kr! 👋
             </h1>
             <p className="mb-8 text-lg" style={{color: '#9798A5'}}>Let&apos;s get studying! Choose your path to learning and growth.</p>
             
-            <div onClick={() => router.push('/new')} className="cursor-pointer">
+            <div onClick={() => router.push('/new')} className="cursor-pointer ">
               <div className="p-6 rounded-2xl hover:shadow-xl cursor-pointer transition-all duration-300 transform hover:scale-[1.02] text-white" style={{background: 'linear-gradient(to right, #302758, #876283)'}}>
                 <div className="flex items-center">
                   <div className="w-14 h-14 bg-white/20 rounded-xl mr-6 flex items-center justify-center backdrop-blur-sm">
@@ -51,7 +52,12 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+            </div>
+            <div className="flex justify-center items-center transform -translate-x-14">
+              {/* <Image src="/tech.png" alt="hero" width={300} height={300} className="object-fill" /> */}
+            </div>
           </div>
+
         </div>
 
         {/* Content Section */}
@@ -95,7 +101,7 @@ export default function Dashboard() {
           </div>
 
           {/* Content List */}
-          <div className="space-y-3">
+          <div className="space-y-3 flex flex-row gap-4 flex-wrap items-start">
             {source.length > 0 ? source.map((item: Source, index: number) => (
               <ChatCard key={index} title={item.metadata.topic} item={item} index={index} id={item._id} icon={item.sourceType} />
             )) : (
