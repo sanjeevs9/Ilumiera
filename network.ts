@@ -1,0 +1,1 @@
+export const network = "https://b2b-api-backend-95487.ondigitalocean.app";
